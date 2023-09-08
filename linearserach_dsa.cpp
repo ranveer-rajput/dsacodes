@@ -57,9 +57,30 @@ using namespace std;
 //   return minNum;
 // }
 
+// void swapNum(int arr[],int size){
+//     int left=0;
+//   int right=size-1;
+//     while(left<=right){
+//         swap(arr[left],arr[right]);
+//         left++;
+//         right--;
+        
+//     }
+//     for(int i=0;i<size;i++){
+//         cout<<arr[i];
+//     }
+// }
+
 int main()
 {
     
+ /******************************************     
+  int arr[6]={2,3,4,5,6,7};
+  int size =6;
+  swapNum(arr,size);
+ ********************************************/ 
+
+
     
  /******************************************    
     int arr[6]={9,5,7,8,6,4};
