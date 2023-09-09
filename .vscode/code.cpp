@@ -49,3 +49,47 @@
 
 //     return 0;
 // }
+ 
+
+ // 3.print all zero's and one's from list in continue
+
+// #include <stdio.h>
+// #include <iostream>
+// using namespace std;
+// void zeroOne(int arr[],int size){
+//     int zero=0;
+//     int one=0;
+//     for(int i=0;i<size;i++){
+//         if(arr[i]==0){
+//             zero++;
+//         }else if(arr[i]==1){
+//             one++;
+//         }
+   
+//       }
+ 
+     
+//     int index=0;
+//     while(zero--){
+//         arr[index]=0;
+//         index++;
+//     }
+//     while(one--){
+//         arr[index]=1;
+//         index++;
+//     }
+//      for(int i=0;i<size;i++){
+//      cout<<arr[i];
+//  }
+// }
+// int main()
+// {
+//  int arr[8]={0,1,0,1,0,0,1,1};
+//  int size=8;
+//  zeroOne(arr,size);
+
+//     return 0;
+// }
+
+
+
