@@ -92,4 +92,42 @@
 // }
 
 
+// 4 all negativenumbers in left side using sorting
+
+// #include <iostream>
+// using namespace std;
+// void moveAllNegToLeft(int arr[],int size){
+//     int low=0;
+//     int high=size-1;
+//     while(low<high){
+//         if(arr[low]<0){
+//             low++;
+//         }
+//         else if(arr[high]>0){
+//             high--;
+//         }
+//         else{
+//             swap(arr[low],arr[high]);
+//         }
+//     }
+//     for(int i=0;i<size;i++){
+//         cout<<arr[i];
+//     }
+    
+    
+// }
+
+// int main()
+// {
+    
+    
+// int arr[6]={-1,4,9,-3,5,-7} ;
+// int size=6;
+
+// moveAllNegToLeft(arr,size);
+
+    
+
+//     return 0;
+// }
 
