@@ -2,9 +2,6 @@
 #include <vector> 
 
 using namespace std;
-
-
-
 void rotate(vector<int>& arr,int k){
      int n=arr.size();
      vector<int>newArr(n);
