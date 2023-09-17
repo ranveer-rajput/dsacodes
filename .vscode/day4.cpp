@@ -137,3 +137,70 @@ int main()
 
     return 0;
 }
+
+
+/******************************************************************************
+ total count of accurance using binary search
+*******************************************************************************/
+#include <iostream>
+
+using namespace std;
+
+int firstAccucrance(int arr[], int size, int target) {
+    int s = 0;
+    int e = size - 1;
+    int ans = -1;
+    while (s <= e) {
+        int mid = (s + e) / 2;
+        if (target == arr[mid]) {
+            ans = mid;
+            e = mid - 1;
+        } else if (target > arr[mid]) {
+            s = mid + 1;
+        } else if (target < arr[mid]) {
+            e = mid - 1;
+        }
+    }
+    return ans;
+}
+
+int lastAccucrance(int arr[], int size, int target) {
+    int s = 0;
+    int e = size - 1;
+    int ans = -1;
+    while (s <= e) {
+        int mid = (s + e) / 2;
+        if (target == arr[mid]) {
+            ans = mid;
+            s = mid + 1;
+        } else if (target > arr[mid]) {
+            s = mid + 1;
+        } else if (target < arr[mid]) {
+            e = mid - 1;
+        }
+    }
+    return ans;
+}
+
+int totalAccurance(int arr[], int size, int target) {
+    int first = firstAccucrance(arr, size, target);
+    int last = lastAccucrance(arr, size, target);
+    int total = last - first + 1;
+    return total;
+}
+
+int main() {
+    int arr[] = {10, 30, 30, 30, 30, 50, 60};
+    int size = 7;
+    int target = 30;
+    int total = totalAccurance(arr, size, target);
+    
+    if (total == 0) {
+        cout << "Target not found";
+    } else {
+        cout << "Total occurrences of " << target << " is: " << total << endl;
+    }
+
+    return 0;
+}
+
