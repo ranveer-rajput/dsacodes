@@ -87,3 +87,53 @@ int main()
 
     return 0;
 }
+
+/******************************************************************************
+ find lastAccurance using binary search
+*******************************************************************************/
+
+#include <iostream>
+#include <vector>
+
+using namespace std;
+
+int lastAccurance(vector<int>& arr,int target){
+    int size=arr.size();
+    int s=0;
+    int e=size-1;
+    int ans=-1;
+    
+   while(s<=e){
+       int mid=(s+e)/2;
+      if(target==arr[mid]){
+          ans=mid;
+          s=mid+1;
+      } 
+      else if(target>arr[mid]){
+           s=mid+1;
+      }
+      else if(target<arr[mid]){
+          e=mid-1;
+      }
+      
+      
+   }
+   return ans;
+    
+}
+
+int main()
+{
+  vector<int> arr={10,20,30,30,30,30,40,40,60,70};
+  int target=40;
+  int result=lastAccurance(arr,target);
+  if(result==-1){
+      cout<<"target not found";
+  }
+ else{
+     cout<<"last accurance is:"<<result;
+ }
+   
+
+    return 0;
+}
